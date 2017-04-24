@@ -1,4 +1,4 @@
-package com.worstentrepreneur.test.dto;
+package com.worstentrepreneur.braintreetest.dto;
 
 import java.util.Calendar;
 

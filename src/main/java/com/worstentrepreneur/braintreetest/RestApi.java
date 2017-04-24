@@ -1,11 +1,9 @@
-package com.worstentrepreneur.test;
+package com.worstentrepreneur.braintreetest;
 
 import com.braintreegateway.*;
-import com.braintreegateway.exceptions.*;
-import com.worstentrepreneur.BraintreeConfig;
-import com.worstentrepreneur.test.dto.AddCreditcardDTO;
-import com.worstentrepreneur.test.dto.CreateCustomerDTO;
-import com.worstentrepreneur.test.dto.CreditcardDTO;
+import com.worstentrepreneur.braintreetest.dto.AddCreditcardDTO;
+import com.worstentrepreneur.braintreetest.dto.CreateCustomerDTO;
+import com.worstentrepreneur.braintreetest.dto.CreditcardDTO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.*;
@@ -18,7 +16,7 @@ import java.util.List;
 import java.util.Random;
 
 @Path("braintree-customer")
-public class CustomerApi {
+public class RestApi {
 	/*
 
 	1) Create customer with credit card 1

@@ -1,4 +1,4 @@
-package com.worstentrepreneur;
+package com.worstentrepreneur.braintreetest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

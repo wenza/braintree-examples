@@ -1,4 +1,4 @@
-var CreateCustomer = function () {
+var BraintreeAjaxCall = function () {
     var formSelector;
     var form;
     var submit;

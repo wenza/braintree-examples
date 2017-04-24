@@ -5,6 +5,7 @@
 ################################
 # CONFIGS
 #src/main/resources/application.yml
+#/src/main/java/com/worstentrepreneur/BraintreeConfig.java
 ################################
 # IDE
 *.iml

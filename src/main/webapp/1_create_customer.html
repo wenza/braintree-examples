@@ -94,14 +94,14 @@
     <!-- Hosted fields JS. -->
     <script src="assets/js/hosted_fields.js"></script>
     <!-- App JS. -->
-    <script src="assets/js/app_1.js"></script>
+    <script src="assets/js/braintree_call.js"></script>
 
 
     <script>
         (function() {
 
             $(document).ready(function() {
-                CreateCustomer.init('#checkout-form','#checkout-form button[type="submit"]','/rest/braintree-customer/','POST');
+                BraintreeAjaxCall.init('#checkout-form','#checkout-form button[type="submit"]','/rest/braintree-customer/','POST');
             });
         })();
     </script>
