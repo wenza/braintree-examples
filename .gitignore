@@ -1,0 +1,15 @@
+################################
+# BUILD FILES
+/target/
+/out/
+################################
+# CONFIGS
+#src/main/resources/application.yml
+################################
+# IDE
+*.iml
+.idea/
+/nbproject/
+*.classpath
+*.project
+/.settings/

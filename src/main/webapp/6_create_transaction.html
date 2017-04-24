@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Braintree - test</title>
+
+</head>
+<body>
+
+
+
+    <!-- LOAD the jQuery. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- App JS. -->
+    <script src="assets/js/app_2.js"></script>
+
+
+    <script>
+        (function() {
+
+            $(document).ready(function() {
+                var braintree_customer_id=52603272;
+                var braintree_payment_method_token='jwmf2y';
+                CleanBraintreeAjaxCall.init('#checkout-form','/rest/braintree-customer/'+braintree_customer_id+'/credit-card/'+braintree_payment_method_token+'/transaction/','POST');
+            });
+        })();
+    </script>
+</body>
+</html>

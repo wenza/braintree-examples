@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Braintree - test</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <link href="/assets/css/hosted_fields.css" rel="stylesheet">
+
+
+</head>
+<body style="padding:25%;">
+
+    <form id="checkout-form" action="/transaction-endpoint" class="register-form modal-form" autocomplete="off" method="post">
+        <div class="modal-body">
+            <input type="hidden" name="payment_method_nonce">
+            <div class="form-group form-md-line-input">
+                <div class="two-column">
+                    <div class="left" style="vertical-align: top;margin-top: 20px;">Credit card</div>
+                    <div class="right">
+                        <div class="cardnum num">
+                            <div id="bt_card_number" class="form-control"></div>
+                        </div>
+                        <div class="cardnum exp">
+                            <div id="bt_exp_date" class="form-control"></div>
+                        </div>
+                        <div class="cardnum cvv">
+                            <div id="bt_cvv" class="form-control"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-we-footer-notop" >
+            <button type="submit" class="btn btn-primary" style="margin:0 5px;" disabled>Create customer</button>
+        </div>
+    </form>
+
+
+    <!-- LOAD the jQuery. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- Load the Client component. -->
+    <script src="https://js.braintreegateway.com/web/3.12.1/js/client.min.js"></script>
+
+    <!-- Load the Hosted Fields component. -->
+    <script src="https://js.braintreegateway.com/web/3.12.1/js/hosted-fields.min.js"></script>
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- Hosted fields JS. -->
+    <script src="assets/js/hosted_fields.js"></script>
+    <!-- App JS. -->
+    <script src="assets/js/app_1.js"></script>
+
+
+    <script>
+        (function() {
+
+            $(document).ready(function() {
+                var braintree_customer_id=52603272;
+                CreateCustomer.init('#checkout-form','#checkout-form button[type="submit"]','/rest/braintree-customer/'+braintree_customer_id+'/credit-card','POST');
+            });
+        })();
+    </script>
+</body>
+</html>
